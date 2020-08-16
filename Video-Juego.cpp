@@ -321,6 +321,8 @@ int main()
 		if( platillo.VID() == 0 ) game_over = true; 
 		Sleep(30); //Se detiene la ejecucion del programa para no saturar el procesador
 	}
+	
+	printf("Fin del Juego\n"); getch(); system("pause");
 		
 	return 0;
 }
