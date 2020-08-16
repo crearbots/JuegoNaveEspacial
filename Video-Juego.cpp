@@ -53,6 +53,23 @@ void pintar_limite() //Funcion pora graficar los limites del juego utilizando ca
 	gotoxy(77,33); printf("%c",188);
 }
 
+void instrucciones()
+{
+	//Pintar instrucciones
+	printf("\t\tBIENVENIDO AL JUEGO DE NAVES\n");
+	printf("Utilice las flechas para moverse\tUtilice la tecla 'p' para disparar\n");
+	printf("\t\t<^>\t\t\t\tp\n");
+	printf("\nPresione cualquier tecla para continuar :) "); getch();
+	
+	//Borrar instrucciones
+	gotoxy(0,0);
+	printf("                                                                      \n");
+	printf("                                                                           \n");
+	printf("                                                                      \n");
+	printf("                                                                      \n");
+	printf("                                                                      \n");
+}
+
 class NAVE //En este momento creamos la clase NAVE para despues determinar el objeto
 {
 	int x,y; //Atributos de la clase los cuales nos definen la coordenadas de la nave
@@ -232,6 +249,7 @@ bool BALA::fuera() //Esta funcion nos permite verificar el momento en el cual el
 
 int main()
 {
+	instrucciones(); //Mostramos las instrucciones en pantalla
 	OcultarCursor(); //Llamamos la funcion para que la linea del cursor desaparezca 
 	pintar_limite(); //LLamamos la funcion para pintar el limite del juego
 	
